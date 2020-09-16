@@ -167,4 +167,4 @@ function SparseArrays.sparse(L::KroneckerSumMap)
 end
 
 # FillMap
-Base.Matrix(A::FillMap) = fill(A.λ, size(A))
+Base.Matrix{T}(A::FillMap) where {T} = fill(T(A.λ), size(A))
